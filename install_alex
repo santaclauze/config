@@ -1,0 +1,17 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+echo "installing"
+
+rm ~/.bashrc ~/.bash_aliases ~/.bash_env
+ln -s $DIR/.bashrc ~/.bashrc
+
+ln -s $DIR/.bash_aliases ~/.bash_aliases
+
+ln -s $DIR/.bash_env ~/.bash_env
+
+echo "export PATH=$PATH:$DIR/bin" >> ~/.bash_env
+echo "done"
+
+exit 0
