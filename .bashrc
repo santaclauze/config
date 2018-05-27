@@ -121,3 +121,5 @@ if (($(date +%s) > $(date -d 'december 25 2017' +%s) )); then toilet -f ivrit 'S
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source ~/utils/bash-completion.bash
+source ~/utils/bash-completion.bash

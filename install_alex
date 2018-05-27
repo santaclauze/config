@@ -5,11 +5,19 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "installing"
 
 rm ~/.bashrc ~/.bash_aliases ~/.bash_env
+
 ln -s $DIR/.bashrc ~/.bashrc
 
 ln -s $DIR/.bash_aliases ~/.bash_aliases
 
 ln -s $DIR/.bash_env ~/.bash_env
+
+# Add git auto-complete
+mkdir $DIR/utils ~/utils
+
+curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash  -o ~/utils/bash-completion.bash
+chmod +x ~/utils/bash-completion.bash
+echo 'source ~/utils/bash-completion.bash'  >> ~/.bashrc
 
 echo "export PATH=$PATH:$DIR/bin" >> ~/.bash_env
 echo "done"
