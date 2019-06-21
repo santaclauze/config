@@ -5,7 +5,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "installing"
 echo "preparing bash configuration"
 
-rm ~/.bashrc ~/.bash_aliases ~/.bash_env $DIR/.bashrc $DIR/.bash_aliases $DIR/.bash_env
+rm ~/.bashrc ~/.bash_aliases ~/.bash_env
 
 ln -s $DIR/.bashrc ~/.bashrc
 
