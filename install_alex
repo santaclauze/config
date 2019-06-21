@@ -3,6 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "installing"
+echo "preparing bash configuration"
 
 rm ~/.bashrc ~/.bash_aliases ~/.bash_env
 
@@ -20,6 +21,15 @@ chmod +x ~/utils/bash-completion.bash
 echo 'source ~/utils/bash-completion.bash'  >> ~/.bashrc
 
 echo "export PATH=$PATH:$DIR/bin" >> ~/.bash_env
+echo "bash configuration done"
+
+echo "installing Node.js"
+# Install nodeJs and npm
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+apt-get update
+apt-get install nodejs
+node -v
+npm -v
 echo "done"
 
 exit 0
