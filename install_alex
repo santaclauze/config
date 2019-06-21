@@ -16,6 +16,10 @@ ln -s $DIR/.bash_env ~/.bash_env
 # Add git auto-complete
 mkdir $DIR/utils ~/utils
 
+echo "installing curl"
+apt-get install curl
+echo "done"
+
 curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash  -o ~/utils/bash-completion.bash
 chmod +x ~/utils/bash-completion.bash
 echo 'source ~/utils/bash-completion.bash'  >> ~/.bashrc
