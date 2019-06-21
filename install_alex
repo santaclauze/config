@@ -5,7 +5,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "installing"
 echo "preparing bash configuration"
 
-rm ~/.bashrc ~/.bash_aliases ~/.bash_env
+rm ~/.bashrc ~/.bash_aliases ~/.bash_env $DIR/.bashrc $DIR/.bash_aliases $DIR/.bash_env
 
 ln -s $DIR/.bashrc ~/.bashrc
 
@@ -38,7 +38,7 @@ echo "done"
 
 echo "installing Chrome"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-apt install ./google-chrome-stable_current_amd64.deb
+apt install google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
 echo "done"
