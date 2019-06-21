@@ -116,7 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if (($(date +%s) > $(date -d 'december 25 2017' +%s) )); then toilet -f ivrit 'SantaClauze' | boxes -d santa -k true | lolcat; fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
