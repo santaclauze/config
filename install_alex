@@ -20,16 +20,12 @@ echo "installing curl"
 apt-get install curl
 echo "done"
 
-curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash  -o ~/utils/bash-completion.bash
-chmod +x ~/utils/bash-completion.bash
-echo 'source ~/utils/bash-completion.bash'  >> ~/.bashrc
-
 echo "export PATH=$PATH:$DIR/bin" >> ~/.bash_env
 echo "bash configuration done"
 
 echo "installing Node.js"
 # Install nodeJs and npm
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
 apt-get update
 apt-get install nodejs
 node -v
@@ -38,7 +34,7 @@ echo "done"
 
 echo "installing Chrome"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-apt install google-chrome-stable_current_amd64.deb
+apt install ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
 echo "done"
